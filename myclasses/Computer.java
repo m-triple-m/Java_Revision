@@ -1,3 +1,5 @@
+package myclasses;
+
 public class Computer {
 
     private int ram;
