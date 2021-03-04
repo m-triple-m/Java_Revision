@@ -17,15 +17,18 @@ public class Main {
         // int ram = cp.getRam();
         // System.out.println(ram);
 
-        Account acc1 = new Account();
+        Account acc1 = new Account(6000, "MMM");
 
         System.out.println(acc1.getBalance());
-        acc1.debit(2300);
+        System.out.println(acc1.debit(2300));
         System.out.println(acc1.getBalance());
 
 
-        Account acc2 = new Account();
+        Account acc2 = new Account(1500, "Leon S Kennedy");
         System.out.println(acc2.getBalance());
+        System.out.println(acc2.credit(500));
+        System.out.println(acc2.getBalance());
+        System.out.println(acc2.getDetails());
     }
 
 }

@@ -2,7 +2,15 @@ package myclasses;
 
 public class Account {
 
-    private int balance = 5000;
+    private int balance;
+    private String holder_name;
+
+    
+
+    public Account(int balance, String name){
+        this.balance = balance;
+        this.holder_name = name;
+    }
 
     public String debit(int amt) {
         balance-=amt;
@@ -16,6 +24,10 @@ public class Account {
 
     public int getBalance() {
         return balance;
+    }
+
+    public String getDetails(){
+        return (" Account Holder's name : "+holder_name+"\n Balance : "+balance);
     }
 
 }
