@@ -1,5 +1,6 @@
 package myclasses;
 
+import java.util.Scanner;
 
 public class Computer {
 
@@ -24,11 +25,17 @@ public class Computer {
     }
 
 
+    public String getDetails(){
+        return "Details of Computer";
+    }
+
+
     public static void main(String[] args) {
         Laptop lap = new Laptop(16, 2, 500, "3.5 Ghz");
-        
 
         System.out.println(lap.getRam()+" GB");
+
+        System.out.println(lap.getDetails());
     }
 
 }
@@ -40,4 +47,32 @@ class Laptop extends Computer {
         super(ram, hdd, ssd, processor);
     }
 
+    public String getDetails(){
+        return "Details of Laptop";
+    }
+
+}
+
+
+class DesktopComputer extends Computer{
+
+    public DesktopComputer(int ram, int hdd, int ssd, String processor){
+        super(ram, hdd, ssd, processor);
+    }
+
+    public String getDetails(){
+        return "Details of Desktop";
+    }
+
+}
+
+
+
+class GamingLaptop extends Laptop{
+
+    public GamingLaptop(int ram, int hdd, int ssd, String processor){
+        super(ram, hdd, ssd, processor);
+    }
+
+    
 }
